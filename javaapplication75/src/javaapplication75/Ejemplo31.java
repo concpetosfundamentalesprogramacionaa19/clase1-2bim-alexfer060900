@@ -18,6 +18,7 @@ public class Ejemplo31 {
         boolean bandera = true;
         double nota;
         int opcion;
+        int contador = 0;
         Scanner entrada = new Scanner(System.in);
         int[] datos = new int[6];
         String[] rangos = {"0-8", "8.1-12", "12.1-16", "16.1-19", "19.1-20",
@@ -25,6 +26,7 @@ public class Ejemplo31 {
         while (bandera == true){
          System.out.println("Ingrese la nota del estudiante por favor.");
         nota = entrada.nextDouble();
+        contador = contador + 1;
         if(nota >= 0 && nota <=8){
             datos[0] = datos[0] + 1;
         }else{
@@ -58,7 +60,7 @@ public class Ejemplo31 {
         }
         
         
-        System.out.println("Notas ingresadas\nRangos:");
+        System.out.printf("Notas ingresadas: %d\nRangos:\n", contador);
         for(int i = 0; i<datos.length; i++){
             System.out.printf("%s = %d\n", rangos[i], datos[i]);
         }
